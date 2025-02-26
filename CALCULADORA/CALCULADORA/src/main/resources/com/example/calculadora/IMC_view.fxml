@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.VBox?>
+
+<?import javafx.scene.control.TableColumn?>
+<VBox xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.calculadora.Controller.IMCController" spacing="10">
+    <padding>
+        <Insets top="10" right="10" bottom="10" left="10"/>
+    </padding>
+
+
+    <GridPane hgap="10" vgap="10">
+        <Label text="Nome:" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+        <TextField fx:id="nomeField" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+
+        <Label text="Altura (m):" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+        <TextField fx:id="alturaField" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+
+        <Label text="Peso (kg):" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+        <TextField fx:id="pesoField" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+
+        <Button text="Calcular" onAction="#onCalculatorButtonClick" GridPane.columnIndex="1" GridPane.rowIndex="3">
+
+        </Button>
+        <Label fx:id="resultadoLabel" GridPane.columnIndex="1" GridPane.rowIndex="4"/>
+    </GridPane>
+
+    <TableView fx:id="tabela">
+        <columns>
+            <TableColumn text="Nome" fx:id="nomeCol"/>
+            <TableColumn text="Altura" fx:id="alturaCol"/>
+            <TableColumn text="Peso" fx:id="pesoCol"/>
+            <TableColumn text="IMC" fx:id="imcCol"/>
+            <TableColumn text="Classificação" fx:id="classificacaoCol"/>
+        </columns>
+    </TableView>
+</VBox>
