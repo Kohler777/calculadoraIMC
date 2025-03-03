@@ -6,7 +6,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
-public class IMCApp extends Application {
+public class  IMCApp extends Application {
 
 
     @Override
@@ -18,7 +18,7 @@ public class IMCApp extends Application {
         primaryStage.setTitle("Calculadora de IMC");
 
         // Define a cena com o layout carregado do FXML e as dimensões da janela
-        primaryStage.setScene(new Scene(root, 600, 400));
+        primaryStage.setScene(new Scene(root, 800, 600));
 
         // Exibe a janela
         primaryStage.show();
